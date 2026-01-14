@@ -1,0 +1,16 @@
+version: 2
+services:
+  - type: web
+    name: isdieserver
+    runtime: docker
+    plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+    healthCheckPath: /health

@@ -27,7 +27,18 @@ SECRET_KEY=your-secret-key
 
 ### 运行服务
 
-**开发环境:**
+**推荐（使用项目虚拟环境）:**
+```bash
+# 第一次：创建并安装依赖
+make venv
+
+# 启动（两种方式任选其一）
+./start.sh
+# 或
+make run
+```
+
+**直接开发（已激活虚拟环境时）:**
 ```bash
 python app.py
 ```
@@ -39,7 +50,7 @@ gunicorn app:app -c gunicorn.conf.py
 
 **Docker 部署:**
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 服务将在 `http://localhost:5001` 上运行。
@@ -81,6 +92,7 @@ isDieServer/
 ├── requirements.txt       # Python 依赖
 ├── Dockerfile            # Docker 配置
 ├── docker-compose.yml    # Docker Compose 配置
+├── compose.yaml          # Docker Compose (plugin) 配置（与 docker-compose.yml 相同）
 ├── Procfile              # 云平台部署配置
 ├── .env.example          # 环境变量示例
 ├── .gitignore           # Git 忽略文件

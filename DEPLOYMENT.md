@@ -84,17 +84,17 @@ docker run -d \
 
 #### 3. 使用 Docker Compose（推荐）
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 查看日志:
 ```bash
-docker-compose logs -f
+docker compose logs -f
 ```
 
 停止服务:
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ---
