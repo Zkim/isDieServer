@@ -1,0 +1,12 @@
+{
+  "name": "isdieserver",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "deploy": {
+    "env": {
+      "FLASK_ENV": "production",
+      "PORT": "5001"
+    }
+  }
+}
